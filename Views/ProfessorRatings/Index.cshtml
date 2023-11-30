@@ -1,0 +1,125 @@
+﻿@model IEnumerable<MyRateApp2.Models.ProfessorRating>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Awesome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Great)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Awful)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Good)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ok)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Comments)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Attendance)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Grade)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Textbook)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Date)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RatingQuality)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RatingDificulty)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.WouldTakeAgain)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ForCredit)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.User)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProfId)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Awesome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Great)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Awful)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Good)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ok)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Comments)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Attendance)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Grade)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Textbook)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Date)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RatingQuality)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RatingDificulty)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.WouldTakeAgain)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ForCredit)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.User.UserId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProfId)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.ProfessorRatingId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.ProfessorRatingId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.ProfessorRatingId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

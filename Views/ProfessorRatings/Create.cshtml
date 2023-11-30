@@ -1,0 +1,107 @@
+﻿@model MyRateApp2.Models.ProfessorRating
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>ProfessorRating</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Awesome" class="control-label"></label>
+                <input asp-for="Awesome" class="form-control" />
+                <span asp-validation-for="Awesome" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Great" class="control-label"></label>
+                <input asp-for="Great" class="form-control" />
+                <span asp-validation-for="Great" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Awful" class="control-label"></label>
+                <input asp-for="Awful" class="form-control" />
+                <span asp-validation-for="Awful" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Good" class="control-label"></label>
+                <input asp-for="Good" class="form-control" />
+                <span asp-validation-for="Good" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Ok" class="control-label"></label>
+                <input asp-for="Ok" class="form-control" />
+                <span asp-validation-for="Ok" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Comments" class="control-label"></label>
+                <input asp-for="Comments" class="form-control" />
+                <span asp-validation-for="Comments" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Attendance" /> @Html.DisplayNameFor(model => model.Attendance)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="Grade" class="control-label"></label>
+                <input asp-for="Grade" class="form-control" />
+                <span asp-validation-for="Grade" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Textbook" /> @Html.DisplayNameFor(model => model.Textbook)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="Date" class="control-label"></label>
+                <input asp-for="Date" class="form-control" />
+                <span asp-validation-for="Date" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RatingQuality" class="control-label"></label>
+                <input asp-for="RatingQuality" class="form-control" />
+                <span asp-validation-for="RatingQuality" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RatingDificulty" class="control-label"></label>
+                <input asp-for="RatingDificulty" class="form-control" />
+                <span asp-validation-for="RatingDificulty" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="WouldTakeAgain" /> @Html.DisplayNameFor(model => model.WouldTakeAgain)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="ForCredit" /> @Html.DisplayNameFor(model => model.ForCredit)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="UserId" class="control-label"></label>
+                <select asp-for="UserId" class ="form-control" asp-items="ViewBag.UserId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="ProfId" class="control-label"></label>
+                <input asp-for="ProfId" class="form-control" />
+                <span asp-validation-for="ProfId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,48 @@
+﻿@model MyRateApp2.Models.University
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>University</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.UniName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.UniName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.UniCountry)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.UniCountry)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.UniState)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.UniState)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.UniWebsite)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.UniWebsite)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.UniEmail)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.UniEmail)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.UniId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
